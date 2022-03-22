@@ -1,3 +1,11 @@
+:root {
+    --blue: #1992D4;
+    --orange: #EFAF1A;
+    --gray: #E2E8F0;
+    --text: #9e9e9e;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -5,30 +13,114 @@
 .wrapper {
     display:grid;
     grid-template-columns: 1fr 3fr;
+    font-size: 1.2rem;
 }
 
 nav {
     display: grid;
     grid-template-rows: 5rem;
+    background-color: var(--blue);
+    color:white;
 }
-nav > * {
-    border:solid 1px;
+
+nav a, nav a:active, nav a:visited {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
 }
+
 menu {
+    display:flex;
     padding: 0;
+    flex-direction: column;
+    gap:50px;
 }
 menu ul {
-    border: solid 1px;
     padding: 0;
     list-style: none;
     margin: 0;
 }
 
+menu li {
+    padding: 10px;
+}
+
 main {
-    border: solid 1px;
     display: grid;
     grid-template-rows: 10rem;
 }
-main > * {
-    border: solid 1px;
+
+header {
+    display: grid;
+    font-weight: 700;
+    font-size:1.1rem;
+}
+
+
+.search-and-account-controls, .welcome-and-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.search, .account-controls, .welcome, .buttons {
+    display: grid;
+    align-items: center;
+}
+
+.welcome {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+}
+
+.welcome .profile-pic {
+    grid-row: span 2;
+    width:80px;
+    height:80px;
+    font-size: 2rem;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+}
+
+section {
+    padding: 15px;
+    background-color: var(--gray);
+    color:var(--text);
+}
+
+.cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    gap:25px;
+}
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.3);
+    background-color: white;
+    border-left: solid 11px var(--orange);
+}
+
+h2, h3 {
+    color: black;
+}
+
+.card h3 {
+
+}
+
+.card p {
+    flex:auto;
 }
