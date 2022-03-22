@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <title>Admin Dashboard</title>
 </head>
 <body>
@@ -46,35 +49,35 @@
                 </ul>
             </menu>
         </nav>
+        <header>
+            <div class="search-and-account-controls">
+                <label for="search" class="search">
+                    <span>🔍</span>
+                    <input type="search" name="search" id="search">
+                </label>
+                <div class="account-controls">
+                    <button class="notifications">🔔</button>
+                    <div class="profile-pic">🐈</div>
+                    <span class="user-name">Morgan Oakley</span>
+                </div>
+            </div>
+            <div class="welcome-and-buttons">
+                <div class="welcome">
+                    <div class="profile-pic">🐈</div>
+                    <div class="greeting">Hi there,</div>
+                    <div class="user-name">Morgan Oakley (@morgan)</div>
+                </div>
+                <div class="buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </div>
+        </header>
         <main>
-            <header>
-                <div class="search-and-account-controls">
-                    <label for="search">
-                        <span>🔍</span>
-                        <input type="search" name="search" id="search">
-                    </label>
-                    <div class="account-controls">
-                        <button class="notifications">🔔</button>
-                        <div class="profile-pic">🐈</div>
-                        <span class="user-name">Morgan Oakley</span>
-                    </div>
-                </div>
-                <div class="welcome-and-buttons">
-                    <div class="welcome">
-                        <div class="profile-pic">🐈</div>
-                        <div class="greeting">Hi there,</div>
-                        <div class="user-name">Morgan Oakley (@morgan)</div>
-                    </div>
-                    <div class="buttons">
-                        <button>New</button>
-                        <button>Upload</button>
-                        <button>Share</button>
-                    </div>
-                </div>
-            </header>
-            <section>
+            <section class="projects">
+                <h2>Your Projects</h2>
                 <div class="cards">
-                    <h2>Your Projects</h2>
                     <div class="card">
                         <h3>Title 1</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam eum fuga tempore cupiditate repellat hic ut enim consectetur, doloremque dolore accusantium iure. Tenetur molestiae necessitatibus dignissimos enim atque ipsam nobis!</p>
@@ -106,7 +109,8 @@
                         <div class="icons">⭐ 👁 🔀</div>
                     </div>
                 </div>
-                <div class="sidebar">
+            </section>
+            <section class="sidebar">
                     <div class="announcements-container">
                         <h2>Announcements</h2>
                         <div class="announcements">
@@ -144,7 +148,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
         </main>
     </div>
