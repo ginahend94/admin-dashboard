@@ -19,7 +19,6 @@
     'nav header'
     'nav main';
     height:100vh;
-    border: solid 3px green;
 }
 
 nav {
@@ -70,6 +69,7 @@ header {
     font-weight: bold;
     box-shadow: 0 5px 3px rgba(0,0,0,.1);
     z-index: 999;
+    padding: 10px 20px;
 }
 
 .search-and-user-info {
@@ -191,12 +191,8 @@ main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 20px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     gap: 20px;
-}
-
-main > * {
-    border: solid 1px red;
 }
 
 h2, h3, h4, p {
@@ -254,18 +250,15 @@ h4 {
 
 .sidebar {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, min-content);
     gap:20px;
-}
-
-.sidebar > * {
-    border: solid 1px blue;
 }
 
 .announcements, .trending {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.1);
 }
 .announcements p {
     font-size: .7rem;
@@ -281,16 +274,45 @@ h4 {
 }
 
 .trending {
-    border: solid 1px red;
     background-color: white;
     display: grid;
-    gap: 10px;
-}
-
-.trending > * {
-    border: solid 1px green;
+    gap: 20px;
 }
 
 .trending-user {
-    
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(2, 1fr);
+    font-size: .8rem;
+    color: var(--text);
+    gap:5px;
+}
+.trending-user a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.pfp {
+    width:5ch;
+    height: 5ch;
+    background-image: var(--user-icon);
+    background-size: cover;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    border: solid 5px var(--bg-color);
+    grid-row: span 2;
+    align-self: center;
+}
+
+.trending-user:nth-child(1) .pfp {
+    --bg-color: pink;
+}
+.trending-user:nth-child(2) .pfp {
+    --bg-color: var(--orange);
+}
+.trending-user:nth-child(3) .pfp {
+    --bg-color: lightblue;
+}
+.trending-user:nth-child(4) .pfp {
+    --bg-color: lightgreen;
 }
