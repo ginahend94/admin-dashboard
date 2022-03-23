@@ -67,10 +67,9 @@ header {
     grid-area: header;
     background-color: white;
     display: grid;
-}
-
-header > * {
-    border: solid 1px var(--blue);
+    font-weight: bold;
+    box-shadow: 0 5px 3px rgba(0,0,0,.1);
+    z-index: 999;
 }
 
 .search-and-user-info {
@@ -123,17 +122,68 @@ header > * {
     padding: 10px;
 }
 
-.user-name {
-    font-weight: bold;
-}
-
 .notifications {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    transition: .2s;
 }
 
+.notifications:hover {
+    opacity: .5;
+}
 
+.welcome-and-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 20px;
+}
+
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap:5px;
+}
+
+.welcome .profile-pic {
+    grid-row: span 2;
+    width:50px;
+    height: 50px;
+}
+
+.welcome .user-name {
+    font-size: 1rem;
+}
+
+.greeting {
+    font-size: .8rem;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, 100px));
+    gap:20px;
+    font-size: .9rem;
+}
+
+.buttons button {
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: var(--blue);
+    transition: .2s;
+}
+
+.buttons button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.buttons button:active {
+    opacity: 1;
+}
 
 main {
     grid-area: main;
