@@ -75,12 +75,16 @@ header > * {
 
 .search-and-user-info {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr max-content;
     align-items: center;
+    gap:10px;
 }
 
-.search-and-user-info > * {
-    border: solid 1px green;
+.search {
+    display: grid;
+    grid-template-columns: min-content minmax(50%, 900px);
+    margin: 10px;
+    gap:5px;
 }
 
 .user-info {
@@ -92,10 +96,7 @@ header > * {
     align-items: center;
 }
 
-.user-info .profile-pic {
-    width: 35px;
-    height: 35px;
-    padding: 10px;
+.profile-pic {
     border: solid 5px var(--orange);
     border-radius: 50%;
     background-image: var(--user-icon);
@@ -103,12 +104,20 @@ header > * {
     background-color: var(--orange);
 }
 
-.user-info .user-name {
+.user-info .profile-pic {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+}
+
+.user-name {
     font-weight: bold;
 }
 
-.user-info > * {
-    border: solid 1px red;
+.notifications {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 main {
