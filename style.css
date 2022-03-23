@@ -8,7 +8,6 @@
 
 * {
     box-sizing: border-box;
-    border:solid 1px;
 }
 
 .wrapper {
@@ -26,7 +25,40 @@ nav {
     grid-area: nav;
     display: grid;
     grid-template-rows: 5rem;
-    background-color: aquamarine;
+    background-color: var(--blue);
+    color:white;
+    font-weight: bold;
+}
+
+nav a {
+    color:white;
+    width: min-content;
+    text-decoration: none;
+}
+
+nav a:hover {
+    opacity:.8;
+}
+
+menu {
+    display: grid;
+    gap:25px;
+    grid-template-rows: repeat(2, min-content);
+    padding: 0;
+}
+menu ul {
+    display: grid;
+    gap:5px;
+    padding: 0;
+}
+li, .logo {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    gap: 10px;
+    align-items: center;
+}
+li {
+    margin-left: 10px;
 }
 
 header {
