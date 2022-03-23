@@ -192,18 +192,23 @@ main {
     grid-template-columns: 3fr 1fr;
     padding: 20px;
     overflow-y: scroll;
+    gap: 20px;
 }
 
 main > * {
     border: solid 1px red;
 }
 
-section {
-    padding: 20px;
-}
-
 h2, h3, h4, p {
     margin: 10px 0;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+h4 {
+    font-size: .9rem;
 }
 
 .cards {
@@ -245,4 +250,47 @@ h2, h3, h4, p {
 }
 .icons svg:active {
     opacity: .7;
+}
+
+.sidebar {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap:20px;
+}
+
+.sidebar > * {
+    border: solid 1px blue;
+}
+
+.announcements, .trending {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.announcements p {
+    font-size: .7rem;
+    color: var(--text);
+}
+
+.announcement {
+    border-bottom: solid 1px var(--gray);
+}
+
+.announcement:last-child {
+    border-bottom: none;
+}
+
+.trending {
+    border: solid 1px red;
+    background-color: white;
+    display: grid;
+    gap: 10px;
+}
+
+.trending > * {
+    border: solid 1px green;
+}
+
+.trending-user {
+    
 }
