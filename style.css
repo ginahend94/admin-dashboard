@@ -29,6 +29,7 @@ nav {
     background-color: var(--blue);
     color:white;
     font-weight: bold;
+    padding: 20px;
 }
 
 nav a {
