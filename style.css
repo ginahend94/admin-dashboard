@@ -6,6 +6,7 @@
 .wrapper {
     display:grid;
     grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 5fr;
     height:100vh;
     border: solid 3px green;
 }
@@ -18,16 +19,31 @@ nav {
 
 header {
     background-color: lightcoral;
+    display: grid;
+}
+.search-and-account-controls {
+    background-color: red;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.account-controls {
+    display: flex;
 }
 
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    background-color: orange;
 }
 
 
 .projects {
     background-color: bisque;
+}
+
+.cards {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(30ch, 1fr));
 }
 
 .sidebar {
